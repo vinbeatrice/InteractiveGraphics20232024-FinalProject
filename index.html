@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammojs tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@v0.164.1/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.164.1/examples/jsm/"
+          }
+        }
+  </script>
+</head>
+<body>
+  <script>
+    window.addEventListener('load', function () {
+      var loaderContainer = document.getElementById('loader-container');
+      var content = document.getElementById('content');
+      loaderContainer.style.display = 'none';
+    });
+
+  </script>
+  <script type="module" src="js/main.js"></script>
+  <div id="loader-container">
+    <div id="loader-text">Waiting for models to be loaded...</div>
+    <div id="loader"></div>
+  </div>
+  <div id="scene-container"></div>
+  <div id="sidebar">
+      <div class="input-container">
+        <input type="text" id="dice_input" placeholder="e.g. 3d6 + 2d4">
+        <button class="button-27" id="roll_btn">Roll</button>
+      </div>
+      <button class="button-57" role="button" id="d20_btn"><span class="text">Roll 20</span><span><img src="./icons/d20.png" alt="Icon" class="button-icon"></span></button>
+      <button class="button-57" role="button" id="d12_btn"><span class="text">Roll 12</span><span><img src="./icons/d12.png" alt="Icon" class="button-icon"></span></button>
+      <button class="button-57" role="button" id="d8_btn"><span class="text">Roll 8</span><span><img src="./icons/d20.png" alt="Icon" class="button-icon"></span></button>
+      <button class="button-57" role="button" id="d6_btn"><span class="text">Roll 6</span><span><img src="./icons/d6.png" alt="Icon" class="button-icon"></span></button>
+      <button class="button-57" role="button" id="d4_btn"><span class="text">Roll 4</span><span><img src="./icons/d4.png" alt="Icon" class="button-icon"></span></button>
+
+      <button type="button" class="button-27" id="clear_btn" role="button">Clear</button>
+
+
+  </div>
+
+    
+
+    <script src="js/ammo.js"></script>
+</body>
+</html>

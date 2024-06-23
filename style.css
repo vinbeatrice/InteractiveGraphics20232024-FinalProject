@@ -1,0 +1,211 @@
+body {
+    margin: 0;
+    display: flex;
+}
+
+/*CSS loading page*/
+#loader-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#loader-text {
+  font-size: 1.6em;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+/*CSS for side bar*/
+
+#scene-container {
+    flex-grow: 1;
+    height: 100vh;
+}
+#sidebar {
+    width: 300px;
+    background: #696970;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+}
+#sidebar button {
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.input-container {
+  margin-top: 200px;
+  display: flex;
+}
+
+#roll_btn{
+  min-height: 25px;
+  border-radius: 9px;
+  margin-right: 15px;
+}
+
+#dice_input{
+  padding: 6px 12px;
+  background: rgb(31, 32, 35);
+  border: 1px solid rgb(60, 63, 68);
+  border-radius: 4px;
+  font-size: 13px;
+  color: rgb(247, 248, 248);
+  height: 30px;
+  margin: 10px;
+  margin-left: 15px;
+  appearance: none;
+  transition: border 0.15s ease 0s;
+  :focus{
+      outline: none;
+      box-shadow: none;
+      border-color: rgb(100, 153, 255);
+  }
+}
+
+.button-27 {
+  appearance: none;
+  background-color: #1A1A1A;
+  border: 2px solid #1A1A1A;
+  border-radius: 9px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  /*font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";*/
+  font-size: 16px;
+  line-height: normal;
+  margin: 10px;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  max-width: 180px;
+  min-height: 25px;
+  will-change: transform;
+}
+
+.button-27:disabled {
+  pointer-events: none;
+}
+
+.button-27:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-27:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+.button-icon {
+  margin-right: 8px; /* Spazio tra l'immagine e il testo */
+  height: 24px; /* Altezza dell'immagine, puoi regolarla come necessario */
+  width: auto; /* Mantiene le proporzioni dell'immagine */
+}
+
+
+.button-57 {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #000000;
+  color: #ffffff;
+  width: 100px;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #000000;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-57 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button-57 span:last-child {
+  color: rgb(0, 0, 0);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 225%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.button-57:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button-57:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button-57:hover span:last-child {
+  transform: translate(-50%, -100%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+.button-icon {
+  display: block;
+  margin: auto;
+}
