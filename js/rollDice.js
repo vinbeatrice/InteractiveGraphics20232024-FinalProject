@@ -105,17 +105,17 @@ function throwDice(dice_type){
     let force_x, force_y, force_z;
 
     random = Math.random() < 0.5 ? -1 : 1;
-    force_x = (Math.floor(Math.random() * (500 - 50 + 1)) + 50) * random;
+    force_x = (Math.floor(Math.random() * (70 - 50 + 1)) + 50) * random;
 
     random = Math.random() < 0.5 ? -1 : 1;
-    force_y = (Math.floor(Math.random() * (-900 + 500 + 1)) - 500); //don't multiply because it must be throw down
+    force_y = (Math.floor(Math.random() * (-70 + 50 + 1)) - 50); //don't multiply because it must be throw down
 
     random = Math.random() < 0.5 ? -1 : 1;
-    force_z = (Math.floor(Math.random() * (500 - 50 + 1)) + 50) * random;
+    force_z = (Math.floor(Math.random() * (70 - 50 + 1)) + 50) * random;
     
     force = new Ammo.btVector3(force_x, force_y, force_z);
     
-    physicsBody.applyCentralForce(force);
+    physicsBody.applyCentralImpulse(force);
 
     //console.log("force_x: ", force_x, "force_y: ", force_y, "force_z: ", force_z);
 
