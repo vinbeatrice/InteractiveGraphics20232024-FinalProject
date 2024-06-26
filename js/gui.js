@@ -1,12 +1,11 @@
 import { GUI } from 'three/addons/libs/lil-gui.module.min.js'
-import{masses, gravity, friction, simulationParams} from './physics.js';
+import{masses, friction, simulationParams} from './physics.js';
 
 const gui = new GUI();
 
 //Physics Folders
 const physicsFolder = gui.addFolder('Physics Parameters');
 physicsFolder.add(simulationParams, 'maxSubSteps', 1, 20).name('Max Sub Steps');
-physicsFolder.add(gravity, 'g', -30, 0).name('Gravity');
 physicsFolder.add(friction, 'static_friction', 0.1, 1).name('Dice Static Friction');
 physicsFolder.add(friction, 'rolling_friction', 0.01, 0.5).name('Dice Rolling Friction');
 physicsFolder.close();
