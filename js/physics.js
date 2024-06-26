@@ -12,10 +12,6 @@ export let masses = {
     mass_d20: 2.0
 };
 
-export let gravity = {
-    g: -9.81
-}
-
 export let simulationParams = {
     maxSubSteps: 10
 };
@@ -49,7 +45,7 @@ export function setupPhysicsWorld(){
 
     physicsWorld = new Ammo.btDiscreteDynamicsWorld(dispatcher, overlappingPairCache, solver, collisionConfiguration); //This is the dynamic world
 
-    physicsWorld.setGravity(new Ammo.btVector3(0, gravity.g, 0)); //set the gravity
+    physicsWorld.setGravity(new Ammo.btVector3(0, -9.81, 0)); //set the gravity
 
 }
 
